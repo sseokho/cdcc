@@ -631,6 +631,9 @@ label {
   background-repeat: no-repeat;
   background-position: center;
 }
+.main-visual .swiper-navigation .swiper-button-pause.off {
+  background-image: url(../image/main/icon-play__color--white.png);
+}
 .main-visual .swiper-navigation .swiper-button-next {
   background-image: url(../image/common/icon/main-slide__next.png);
 }
@@ -656,6 +659,9 @@ label {
 }
 .main-visual.is-secondSlide .swiper-navigation .swiper-button-pause {
   background-image: url(../image/common/icon/main-slide__pause2.png);
+}
+.main-visual.is-secondSlide .swiper-navigation .swiper-button-pause.off {
+  background-image: url(../image/main/icon-play__color--black.png);
 }
 .main-visual.is-secondSlide .swiper-navigation .swiper-button-next {
   background-image: url(../image/common/icon/main-slide__next--color-black.png);

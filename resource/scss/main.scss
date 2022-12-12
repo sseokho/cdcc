@@ -125,6 +125,9 @@
                         background-image: url(../image/common/icon/main-slide__pause.png);
                         background-repeat: no-repeat;
                         background-position: center;
+                        &.off{
+                            background-image: url(../image/main/icon-play__color--white.png);
+                        }
                     }
                     &-next{
                         background-image: url(../image/common/icon/main-slide__next.png);
@@ -159,6 +162,9 @@
                     }
                     &-pause{
                         background-image: url(../image/common/icon/main-slide__pause2.png);
+                        &.off{
+                            background-image: url(../image/main/icon-play__color--black.png);
+                        }
                     }
                     &-next{
                         background-image: url(../image/common/icon/main-slide__next--color-black.png);
