@@ -392,6 +392,7 @@
 }
 .noticeProgram{
     display: flex;
+    width:100%;
 }
 
 .program{
@@ -645,6 +646,8 @@
                 }
                 &::before{
                     position: absolute;
+                    top: 0;
+                    left: 0;
                     width: 100%;
                     height: 100%;
                     background: rgba(25,57,136,0.9);

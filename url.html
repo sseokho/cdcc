@@ -658,7 +658,7 @@
           if (val.match(/^\.\//g)) {
             href = val;
           } else {
-            href = './dist/' + val;
+            href = './' + val;
           }
           return val.length ? '<a href="' + href + '" target="_blank">' + val + '</a>' : '';
         })();
