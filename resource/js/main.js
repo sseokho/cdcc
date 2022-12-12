@@ -1,52 +1,19 @@
-$(function () {
-    $("#fullpage").prev().addClass("main");
-    $(window).resize(function () {
-        var width = $(window).width();
-        if (width <= 720) {
-            $('.section.active [data-aos]').removeClass("aos-animate");
-        } else {
-        }
-    });
-
-    $(window).trigger("resize"); //강제로 호출하는 함수
-
-
-
-})
-
-
-$(function () {
-    mobile();
-});
-
-function mobile() {
-
-    var w = $(".wrap").width();
-
-    if (w > 721) { //PC
-
-    } else { //mobile 
-        $('.section.active [data-aos]').removeClass("aos-animate");
-    }
-}
-
-
 $(document).ready(function () {
     mainVisualSwiper();
 });
 
 function mainVisualSwiper() {
-    var mySwiper = new Swiper('.main-visual .swiper-container', options);
+    
     
     var autoPlayDelay = 3000;
     var options = {
-        slidesPerView: 1,
+        //slidesPerView: 1,
         init: true,
         // Optional parameters
         loop: false,
-        // autoplay: {
-        //     delay: autoPlayDelay
-        // },
+        autoplay: {
+            delay: autoPlayDelay
+        },
         navigation: {
             nextEl: '.main-visual .swiper-button-next',
             prevEl: '.main-visual .swiper-button-prev',
@@ -54,7 +21,7 @@ function mainVisualSwiper() {
         
     };
 
-    
+    var mySwiper = new Swiper('.main-visual .swiper-container', options);
     var slidersCount = mySwiper.params.loop ? mySwiper.slides.length - 2 : mySwiper.slides.length;
     var widthParts = 100 / slidersCount;
 
@@ -99,6 +66,15 @@ function mainVisualSwiper() {
     mySwiper.on('touchMove', function () {
         $('.swiper-progress-bar .progress').stop().parent().addClass('stopped');
     });
+    $('.main-visual .swiper-button-pause').click(function () {
+		if ($(this).hasClass('off')) {
+		  $(this).removeClass('off');
+		  mySwiper.autoplay.start();
+		} else {
+		  $(this).addClass('off');
+		  mySwiper.autoplay.stop();
+		}
+	  });
 
     mySwiper.on('slideChangeTransitionEnd', function () {
         if(this.activeIndex == 1){

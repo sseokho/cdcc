@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="./resource/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./resource/css/jquery.fullpage.css">
 	<link rel="stylesheet" href="./resource/css/swiper.min.css">
-	<link rel="stylesheet" href="./resource/css/aos.css">
 	<link rel="stylesheet" href="./resource/css/reset.css">
 	<link rel="stylesheet" href="./resource/css/font.css">
 
@@ -29,10 +28,8 @@
 	<script src="./resource/js/bootstrap.bundle.min.js"></script>
 	<script src="./resource/js/TweenMax.min.js"></script>
 
-	<script src="./resource/js/aos.js"></script>
 	<script src="./resource/js/common.js"></script>
 	<script src="./resource/js/main.js"></script>
-	<script src="./resource/js/sub.js"></script>
 
 
 
@@ -198,14 +195,10 @@
 							</div>
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-									</div>
-									<div class="swiper-slide">
-									</div>
-									<div class="swiper-slide ">
-									</div>
-									<div class="swiper-slide">
-									</div>
+									<div class="swiper-slide"></div>
+									<div class="swiper-slide"></div>
+									<div class="swiper-slide "></div>
+									<div class="swiper-slide"></div>
 								</div>
 							</div>
 							<div class="swiper-controller">
@@ -226,7 +219,7 @@
 									<!-- If we need navigation buttons -->
 									<div class="swiper-navigation">
 										<div class="swiper-button-prev"></div>
-										<div class="swiper-button-pause" tabindex="0"></div>
+										<button class="swiper-button-pause" tabindex="0"></button>
 										<div class="swiper-button-next"></div>
 									</div> 
 								</div>
@@ -536,19 +529,6 @@
 	</div>
 </body>
 <script>
-
-	//애니메이션 script
-	AOS.init();
-
-	AOS.init({
-
-	disable: function () {
-		var desktop = 721;
-		return window.innerWidth < desktop;
-		} // 720px 이상일 때 disable
-
-	});
-
 
 	//풀페이지 script
 	$(document).ready(function () {

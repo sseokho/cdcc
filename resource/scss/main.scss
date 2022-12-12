@@ -100,7 +100,7 @@
                 display: flex;
                 align-items: center;
                 position: relative;
-                width: 4rem;
+                width: 4.6rem;
                 height: 1.1rem;
                 margin-left: auto;
                 .swiper-button{
@@ -123,6 +123,8 @@
                         height: .9rem;
                         margin: 0 1rem;
                         background-image: url(../image/common/icon/main-slide__pause.png);
+                        background-repeat: no-repeat;
+                        background-position: center;
                     }
                     &-next{
                         background-image: url(../image/common/icon/main-slide__next.png);
@@ -153,13 +155,13 @@
             .swiper-navigation {
                 .swiper-button{
                     &-prev{
-                        background: url(../image/common/icon/main-slide__prev--color-black.png);
+                        background-image: url(../image/common/icon/main-slide__prev--color-black.png);
                     }
                     &-pause{
-                        background: url(../image/common/icon/main-slide__pause2.png);
+                        background-image: url(../image/common/icon/main-slide__pause2.png);
                     }
                     &-next{
-                        background: url(../image/common/icon/main-slide__next--color-black.png);
+                        background-image: url(../image/common/icon/main-slide__next--color-black.png);
                     }
                 }
             }

@@ -605,7 +605,7 @@ label {
   display: flex;
   align-items: center;
   position: relative;
-  width: 4rem;
+  width: 4.6rem;
   height: 1.1rem;
   margin-left: auto;
 }
@@ -628,6 +628,8 @@ label {
   height: 0.9rem;
   margin: 0 1rem;
   background-image: url(../image/common/icon/main-slide__pause.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .main-visual .swiper-navigation .swiper-button-next {
   background-image: url(../image/common/icon/main-slide__next.png);
@@ -650,13 +652,13 @@ label {
   color: #000000;
 }
 .main-visual.is-secondSlide .swiper-navigation .swiper-button-prev {
-  background: url(../image/common/icon/main-slide__prev--color-black.png);
+  background-image: url(../image/common/icon/main-slide__prev--color-black.png);
 }
 .main-visual.is-secondSlide .swiper-navigation .swiper-button-pause {
-  background: url(../image/common/icon/main-slide__pause2.png);
+  background-image: url(../image/common/icon/main-slide__pause2.png);
 }
 .main-visual.is-secondSlide .swiper-navigation .swiper-button-next {
-  background: url(../image/common/icon/main-slide__next--color-black.png);
+  background-image: url(../image/common/icon/main-slide__next--color-black.png);
 }
 .main-text {
   position: absolute;
