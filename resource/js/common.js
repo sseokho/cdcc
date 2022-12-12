@@ -10,7 +10,7 @@ $(function () {
 
 
 function sitemap() {
-	$(".sitemap-button>button").click(function () {
+	$(".sitemap-button").click(function () {
 		$(this).parent().parent().addClass("open");
 		$(this).parents().find(".header").addClass("h-100");
 		$("html, body").addClass("overflow-hidden");
@@ -47,7 +47,7 @@ $(function () {
 		var width = $(window).width();
 		if (width <= 720) {
 			//gnb sitemap 모바일
-			$(".sitemap button").click(function () {
+			$(".sitemap-button").click(function () {
 				$("html, body").addClass("overflow-hidden");
 				$(".gnb").addClass("open");
 				//$(this).addClass("button-close");
@@ -85,7 +85,7 @@ $(function () {
 			function headerOpen() { //Tweenmax를 이용한 헤더 메뉴 슬라이드 open
 				TweenMax.killAll();
 				TweenMax.to($(".header"), .5, {
-					height: 480,
+					height: 296,
 					ease: 'easeOutExpo'
 				});
 				$(".header").addClass("open");
@@ -135,7 +135,7 @@ $(function () {
 				function headerOpen() { //Tweenmax를 이용한 헤더 메뉴 슬라이드 open
 					TweenMax.killAll();
 					TweenMax.to($(".header"), .5, {
-						height: 480,
+						height: 296,
 						ease: 'easeOutExpo'
 					});
 					$(".header").addClass("open");

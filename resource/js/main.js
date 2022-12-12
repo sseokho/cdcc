@@ -51,6 +51,7 @@ function mainVisualSwiper() {
             nextEl: '.main-visual .swiper-button-next',
             prevEl: '.main-visual .swiper-button-prev',
         },
+        
     };
 
     
@@ -98,4 +99,20 @@ function mainVisualSwiper() {
     mySwiper.on('touchMove', function () {
         $('.swiper-progress-bar .progress').stop().parent().addClass('stopped');
     });
+
+    mySwiper.on('slideChangeTransitionEnd', function () {
+        if(this.activeIndex == 1){
+            $(".main-visual").addClass("is-secondSlide");
+        }else{
+            $(".main-visual").removeClass("is-secondSlide");
+        }
+        if(this.activeIndex == 3){
+            $("body, .section-first").addClass("is-thirdSlide");
+        }else{
+            $("body, .section-first").removeClass("is-thirdSlide");
+        }
+    });
+
+
+
 }
