@@ -836,9 +836,6 @@ label {
   padding-left: 4.5rem;
   font-size: 1.6rem;
 }
-.table-wrap__ver table {
-  table-layout: fixed;
-}
 .table-wrap__ver thead th + th {
   position: relative;
 }
@@ -852,6 +849,9 @@ label {
 }
 .table-wrap__ver tbody tr:hover {
   background: #f1f8ff;
+}
+.table-wrap__fixed table {
+  table-layout: fixed;
 }
 .table-wrap .state-ing {
   color: #1b5dff;

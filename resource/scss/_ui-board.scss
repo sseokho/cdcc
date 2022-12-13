@@ -57,9 +57,7 @@
             }
         }
         &__ver{
-            table{
-                table-layout: fixed;
-            }
+            
             thead{
                 th{
                     &+th{
@@ -81,6 +79,11 @@
                         background: #f1f8ff;
                     }
                 }
+            }
+        }
+        &__fixed{
+            table{
+                table-layout: fixed;
             }
         }
         .state{
