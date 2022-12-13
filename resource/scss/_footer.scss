@@ -98,6 +98,7 @@
             background-size: cover;
             &--facebook{
                 background-image: url(../image/common/footer-sns.png);
+                background-size: 4rem;
             }
         }
     }
@@ -116,6 +117,58 @@
             background: transparent url(../image/common/icon/footer-select.png) no-repeat center right 3rem;
         }
     }
+    &-sub{
+        .footer{
+            &__inner{
+                margin-top: 10rem;
+            }
+            &-top{
+                background: #f0f0f2;
+            }
+            &-link{
+                color:#000000;
+                &__privacy{
+                    color: #193988;
+                }
+            }
+            &-bottom{
+                background: #ffffff;
+            }
+            &-logo{
+                a{
+                    background-image: url(../image/common/footer-logo__sub.png);
+                }
+            }
+            &-sns{
+                &__link--facebook{
+                    background-image: url(../image/common/footer-sns__sub.png);
+                }
+            }
+            &-site{
+                &__select{
+                    color:#747478;
+                    border-color:#ccccce;
+                    background: url(../image/common/icon/footer-select__sub.png) no-repeat center right 3rem;
+                }
+            }
+            &-text{
+                &__info{
+                    &--li{
+                        color:#747478;
+                        span{
+                            color:#b4b4b4;
+                        }
+                    }
+                }
+            }
+            &-txt{
+                &__copyright{
+                    color:#a4a4a4;
+                }
+            }
+        }
+        
+    }
 }
 
 
@@ -125,17 +178,11 @@
 
 @media screen and(max-width:720px){
     .footer{
-        &__inner{
-            @include flex-column;
-            padding-left:3rem;
-            padding-right:3rem;
-        }
-        &-img{
-            margin-right: 0;
+        &-bottom__inner{
+            flex-wrap: wrap;
         }
         &-txt{
-            margin-top: 3rem;
-            text-align: center;
+            width:100%;
         }
     }
 }

@@ -1,0 +1,146 @@
+@import "./svg";
+@import "./mixin";
+
+.board{
+    &-top{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+        .search-box{
+            margin-left: auto;
+        }
+    }
+    &-bottom{
+        margin-top: 3rem;
+    }
+}
+.table{
+    &-wrap{
+        border-top:1px solid #001b5e;
+        thead{
+            th{
+                
+                padding: 1.8rem 0;
+                font: {
+                    size: 1.8rem;
+                    weight:500;
+                };
+                text-align: center;
+            }
+            background: #f9fbfd;
+            border-bottom:1px solid #dbdfe8;
+        }
+        tbody{
+            tr{
+                border-bottom:1px solid #eaecf2;
+            }
+            td{
+                padding: 1.6rem 0;
+               text-align: center;
+               font-size: 1.6rem;
+                &.tit{
+                    text-align: left;
+                    &-link{
+                        @include ellipsis(1);
+                        padding-left: 4.5rem;
+                    }
+                }
+                .tit{
+                    &__inner{
+                        @include ellipsis(1);
+                    }
+                    &-link{
+                        padding-left: 4.5rem;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+        &__ver{
+            table{
+                table-layout: fixed;
+            }
+            thead{
+                th{
+                    &+th{
+                        position: relative;
+                        &::before{
+                            position: absolute;
+                            left: 0;
+                            width:1px;
+                            height: 1.9rem;
+                            background: #dbdfe8;
+                            content:""
+                        }
+                    }
+                }
+            }
+        }
+        .state{
+            &-ing{
+                color:#1b5dff;
+                font-weight: 500;
+            }
+            &-end{
+                color:#747478;
+            }
+        }
+    }
+    
+}
+.paging{
+    &__inner{
+        display: flex;
+        justify-content: center;
+    }
+    &-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:4rem;
+        height:4rem;
+        border:1px solid #e9ebf0;
+        border-radius: .3rem;
+        font-size: 1.5rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        &.is-active{
+            background: #193a89;
+            color:#ffffff;
+            &:hover{
+                color:#ffffff;
+            }
+        }
+        &+&{
+            margin-left: .5rem;
+        }
+        &__first{
+            background-image: url(../image/common/icon/icon-clampFirst.png);
+            &:hover{
+                background-image: url(../image/common/icon/icon-clampFirst__hover.png);
+            }
+        }
+        &__prev{
+            background-image: url(../image/common/icon/icon-clampPrev.png);
+            &:hover{
+                background-image: url(../image/common/icon/icon-clampPrev__hover.png);
+            }
+        }
+        &__next{
+            background-image: url(../image/common/icon/icon-clampNext.png);
+            &:hover{
+                background-image: url(../image/common/icon/icon-clampNext__hover.png);
+            }
+        }
+        &__last{
+            background-image: url(../image/common/icon/icon-clampLast.png);
+            &:hover{
+                background-image: url(../image/common/icon/icon-clampLast__hover.png);
+            }
+        }
+        &:hover{
+            border-color:#7da3ff;
+            color:#002379;
+        }
+    }
+}
