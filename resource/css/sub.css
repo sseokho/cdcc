@@ -651,6 +651,75 @@ label {
   margin-left: 1rem;
 }
 
+/* 인사말 */
+.greeting-top {
+  display: flex;
+  align-items: center;
+  height: 20rem;
+  background: #193e9a;
+}
+.greeting-top__text {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  padding: 6.5rem 0;
+  font-size: 2.4rem;
+  color: #bed1ff;
+  line-height: 3.6rem;
+  text-align: center;
+}
+.greeting-top__text strong {
+  font-size: 2.4rem;
+  color: #ffffff;
+}
+.greeting-top__text::before, .greeting-top__text::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.greeting-top__text::before {
+  left: -13.5rem;
+  display: inline-block;
+  width: 6.2rem;
+  height: 4.4rem;
+  background: url(../image/sub/icon-greeting__before.png);
+  content: "";
+}
+.greeting-top__text::after {
+  right: -13.5rem;
+  display: inline-block;
+  width: 6.2rem;
+  height: 4.4rem;
+  background: url(../image/sub/icon-greeting.png);
+  content: "";
+}
+.greeting-box {
+  margin-top: 4rem;
+}
+.greeting-box__tit {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3.2rem;
+  color: #333333;
+}
+.greeting-box__tit--color-blue {
+  color: #193988;
+}
+.greeting-box__txt {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  color: #333333;
+}
+.greeting-name {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.greeting-name__text {
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
 /*==========================================================================================================================================================================================================================================================================*/
 @media screen and (max-width: 1024px) {
   .lnb {

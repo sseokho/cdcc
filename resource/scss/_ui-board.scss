@@ -75,6 +75,13 @@
                     }
                 }
             }
+            tbody{
+                tr{
+                    &:hover{
+                        background: #f1f8ff;
+                    }
+                }
+            }
         }
         .state{
             &-ing{

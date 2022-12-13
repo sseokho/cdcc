@@ -162,6 +162,81 @@
     }
 }
 
+/* 인사말 */ 
+.greeting{
+    &-top{
+        display: flex;
+        align-items: center;
+        height: 20rem;
+        background: #193e9a;
+        &__text{
+            display: inline-block;
+            position: relative;
+            margin: 0 auto;
+            padding: 6.5rem 0;
+            font-size: 2.4rem;
+            color:#bed1ff;
+            line-height: 3.6rem;
+            text-align: center;
+            strong{
+                font-size: 2.4rem;
+                color:#ffffff;
+            }
+            &::before, &::after{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &::before{
+                left: -13.5rem;
+                display: inline-block;
+                width: 6.2rem;
+                height:4.4rem;
+                background: url(../image/sub/icon-greeting__before.png);
+                content: "";
+            }
+            &::after{
+                right:-13.5rem;
+                display: inline-block;
+                width: 6.2rem;
+                height:4.4rem;
+                background: url(../image/sub/icon-greeting.png);
+                content: "";
+            }
+        }
+    }
+    &-box{
+        margin-top: 4rem;
+        &__tit{
+            font: {
+                size: 2rem;
+                weight:600;
+            }
+            line-height: 3.2rem;
+            color:#333333;
+            &--color{
+                &-blue{
+                    color: #193988;
+                }
+            }
+        }
+        &__txt{
+            font-size: 1.8rem;
+            line-height: 3.2rem;
+            color:#333333;
+        }
+    }
+    &-name{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        &__text{
+            margin-right: 2rem;
+            font-size: 2rem;
+        }
+    }
+}
+
 
 /*==========================================================================================================================================================================================================================================================================*/ 
 

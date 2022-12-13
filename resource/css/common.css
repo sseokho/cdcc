@@ -850,6 +850,9 @@ label {
   background: #dbdfe8;
   content: "";
 }
+.table-wrap__ver tbody tr:hover {
+  background: #f1f8ff;
+}
 .table-wrap .state-ing {
   color: #1b5dff;
   font-weight: 500;
@@ -988,7 +991,7 @@ label {
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  height: 18.5rem;
+  height: 19.5rem;
   margin-top: -1.2rem;
   padding: 3.5rem 3rem 5.5rem;
 }
