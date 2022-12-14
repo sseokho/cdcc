@@ -720,6 +720,113 @@ label {
   font-size: 2rem;
 }
 
+/* 조직도 */
+.sub-item {
+  margin-top: 5rem;
+}
+.sub-item__tit {
+  margin-bottom: 2.5rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.sub-item__cont-tit, .sub-item__cont-txt {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: #333333;
+  word-break: keep-all;
+}
+.sub-item__cont-tit {
+  font-weight: 500;
+}
+
+.counselor-wrap {
+  display: flex;
+}
+.counselor-box {
+  flex: 1;
+  border: 1px solid #dce8f3;
+  border-radius: 0.3rem;
+}
+.counselor-box + .counselor-box {
+  margin-left: 1rem;
+}
+.counselor-name {
+  position: relative;
+  padding: 2.5rem 1.8rem;
+  font-size: 1.6rem;
+}
+.counselor-name::before {
+  position: absolute;
+  left: 2rem;
+  bottom: 0;
+  width: calc(100% - 4rem);
+  height: 1px;
+  background: #e9ebf2;
+  content: "";
+}
+.counselor-name em {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #193a89;
+}
+.counselor-num {
+  display: flex;
+  padding: 2rem 1.8rem 2.5rem 1.8rem;
+  border-bottom: 0.5rem solid #f8f9fb;
+}
+.counselor-num__call, .counselor-num__mail {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #333333;
+}
+.counselor-num__call a, .counselor-num__mail a {
+  font-size: 1.6rem;
+  color: #333333;
+}
+.counselor-num__call {
+  margin-right: 2rem;
+}
+.counselor-num__call::before {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 1rem;
+  background: url(../image/sub/icon-call.png);
+  content: "";
+}
+.counselor-num__mail::before {
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.4rem;
+  margin-right: 1rem;
+  background: url(../image/sub/icon-mail.png);
+  content: "";
+}
+.counselor-career {
+  padding: 2.5rem 2rem;
+}
+.counselor-career__tit {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.counselor-career__li {
+  position: relative;
+  padding-left: 0.7rem;
+  font-size: 1.6rem;
+  color: #333333;
+  line-height: 2.8rem;
+}
+.counselor-career__li::before {
+  position: absolute;
+  top: 1.3rem;
+  left: 0;
+  width: 0.2rem;
+  height: 0.2rem;
+  background: #333333;
+  content: "";
+}
+
 /*==========================================================================================================================================================================================================================================================================*/
 @media screen and (max-width: 1024px) {
   .lnb {

@@ -237,6 +237,126 @@
     }
 }
 
+/* 조직도 */ 
+.sub{
+    &-item{
+        margin-top: 5rem;
+        &__tit{
+            margin-bottom: 2.5rem;
+            font: {
+                size: 2.4rem;
+                weight:500;
+            }
+        }
+        &__cont{
+            &-tit, &-txt{
+                font-size: 1.8rem;
+                line-height: 3rem;
+                color:#333333;
+                word-break: keep-all;
+            }
+            &-tit{
+                font-weight: 500;
+            }
+        }
+    }
+    
+}
+.counselor{
+    &-wrap{
+        display: flex;
+    }
+    &-box{
+        flex:1;
+        border:1px solid #dce8f3;
+        border-radius: .3rem;
+        &+&{
+            margin-left: 1rem;
+        }
+    }
+    &-name{
+        position:relative;
+        padding: 2.5rem 1.8rem;
+        font-size: 1.6rem;
+        &::before{
+            position:absolute;
+            left:2rem;
+            bottom: 0;
+            width:calc(100% - 4rem);
+            height:1px;
+            background:#e9ebf2;
+            content:""
+        }
+        em{
+            font: {
+                size: 2rem;
+                weight:600;
+            }
+            color:#193a89;
+        }
+    }
+    &-num{
+        display: flex;
+        padding: 2rem 1.8rem 2.5rem 1.8rem;
+        border-bottom:.5rem solid #f8f9fb;
+        &__call, &__mail{
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+            color:#333333;
+            a{
+                font-size: 1.6rem;
+                color:#333333;
+            }
+        }
+        &__call{
+            margin-right: 2rem;
+            &::before{
+                display: inline-block;
+                width:1.6rem;
+                height:1.6rem;
+                margin-right: 1rem;
+                background: url(../image/sub/icon-call.png);
+                content:""
+            }
+        }
+        &__mail{
+            &::before{
+                display: inline-block;
+                width:1.7rem;
+                height:1.4rem;
+                margin-right: 1rem;
+                background: url(../image/sub/icon-mail.png);
+                content:""
+            }
+        }
+    }
+    &-career{
+        padding: 2.5rem 2rem;
+        &__tit{
+            font: {
+                size: 1.6rem;
+                weight:500;
+            }
+        }
+        &__li{
+            position: relative;
+            padding-left: .7rem;
+            font-size: 1.6rem;
+            color:#333333;
+            line-height: 2.8rem;
+            &::before{
+                position: absolute;
+                top: 1.3rem;
+                left: 0;
+                width:.2rem;
+                height:.2rem;
+                background: #333333;
+                content:"";
+            }
+        }
+    }
+}
 
 /*==========================================================================================================================================================================================================================================================================*/ 
 

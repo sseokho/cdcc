@@ -847,7 +847,7 @@ label {
   background: #dbdfe8;
   content: "";
 }
-.table-wrap__ver tbody tr:hover {
+.table-wrap__hover tbody tr:hover {
   background: #f1f8ff;
 }
 .table-wrap__fixed table {
