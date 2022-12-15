@@ -1,0 +1,37 @@
+@import "./svg";
+@import "./mixin";
+
+/* modal */ 
+.modal{
+    &-dialog{
+        @include d-flex;
+    }
+    &-content{
+        width:auto;
+        padding: 3rem;
+        border-color: #d1d4dd;
+        border-radius: 0;
+    }
+    &-header{
+        padding-bottom: 2rem;
+        font: {
+            size:1.8rem;
+            weight:500;
+        };
+        border-bottom:1px solid #001b5e;
+    }
+    &-body{
+        padding: 0rem ;
+        border-bottom: 1px solid #eaecf2;
+    }
+    &-footer{
+        padding: 0;
+        padding-top: 3rem;
+        border: 0;
+    }
+    &-lock{
+        .modal-content{
+            width:40rem;
+        }
+    }
+}

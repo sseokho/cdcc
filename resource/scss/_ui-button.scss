@@ -18,7 +18,11 @@
     &s{
         display: flex;
         justify-content: center;    
+        width:100%;
         margin: 0 -.5rem;
+        &__right{
+            justify-content: flex-end;
+        }
     }
     &__width{
         &-m{

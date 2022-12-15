@@ -114,6 +114,14 @@ $border-radius-s : 0.75rem;
 $border-radius-n : 1.5rem;
 
 
+.font{
+    &-size{
+        &__20{
+            font-size: 2rem;
+        }
+    }
+}
+
 $font-weight__l : 200;
 $font-weight__r : 300;
 $font-weight__rm : 400;
@@ -229,15 +237,15 @@ $font-noto : 'notokr', sans-serif;
 
 .font_j{font-family: 'JSDongkang-bold', 'JSDongkang-Regular';}
 
-p{
-    font-size: 1.8rem;
-    color: #000000;
-    line-height: 3.2rem;
-    &.font-s{
-        font-size: 1.8rem;
-        line-height: 3.4rem;
-    }
-}
+// p{
+//     font-size: 1.8rem;
+//     color: #000000;
+//     line-height: 3.2rem;
+//     &.font-s{
+//         font-size: 1.8rem;
+//         line-height: 3.4rem;
+//     }
+// }
 .font{
     &-n{
         font-size: 2rem !important;

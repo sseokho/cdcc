@@ -1,6 +1,8 @@
 @import "./svg";
 @import "./mixin";
 
+
+/* table */ 
 .board{
     &-top{
         display: flex;
@@ -12,6 +14,174 @@
     }
     &-bottom{
         margin-top: 3rem;
+        .ui-buttons{
+            margin-top: -1rem;
+            margin-bottom: 3rem;
+        }
+    }
+    &-view{
+        .view{
+            &-header {
+                padding: 3rem;
+                border-top: 1px solid #000000;
+                border-bottom: 1px solid #dbdfe8;
+                div {
+                    width: 100%;
+                  }
+            }
+            &-title{
+                font-size: 3rem;
+                font-weight: 500;
+                color: #222222;
+                text-align: center;
+                line-height: 3.5rem;
+            }
+            &-info{
+                display: flex;
+                justify-content: center;
+                margin-top: 1.7rem;
+                &__ul{
+                    display: flex;
+                }
+                &__li{
+                    padding: 0 2rem;
+                    &+li{
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            top: 0.5rem;
+                            left: 0rem;
+                            width: 1px;
+                            height: 1.1rem;
+                            background: #dbdfe8;
+                            content: "";
+                          }
+                    }
+                }
+                .tit{
+                    padding-right: 1rem;
+                    font-size: 1.6rem;
+                    color:#747478;
+                }
+                .txt{
+                    font-size: 1.6rem;
+                }
+            }
+            &-file{
+                padding: 2.5rem 3rem;    
+                background: #f9fbfd;
+                &__icon{
+                    display: inline-block;
+                    width:1.2rem;
+                    height:1.4rem;
+                    margin-right: .9rem;
+                    background: url(../image/sub/icon-file__gray.png);
+                    vertical-align: middle;
+                }
+                &__link{
+                    font-size: 1.6rem;
+                    line-height: 2.7rem;
+                }
+                &__li{
+                    &:hover{
+                        .view-file__icon{
+                            background: url(../image/sub/icon-file__blue.png);
+                        }
+                        .view-file__link{
+                            position: relative;
+                            color: #4571e9;
+                            &::before{
+                                position: absolute;
+                                bottom:-.3rem;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #4571e9;
+                                content:""
+                            }
+                        }
+                    }
+                }
+            }
+            &-content{
+                padding: 4rem 3rem;
+                font-size: 1.7rem;
+                border-top: 1px solid #dbdfe8;
+                border-bottom: 1px solid #eaecf2;
+                line-height: 2.9rem;
+                img{
+                    max-width: 100%;
+                }
+            }
+            
+        }
+        
+    }
+    &-gallery{
+        &__inner{
+            padding-top: 4rem;
+            padding-bottom: 6rem;
+            border-top:1px solid #001b5e;
+            border-bottom:1px solid #eaecf2;
+        }
+        &__ul{
+            display: flex;
+            flex-wrap: wrap;
+            margin: -3rem -2rem;
+        }
+        &__li{
+            width: calc(100% / 4);
+            padding: 3rem 2rem;
+        }
+        &__img{
+            width:100%;
+            height: 0;
+            padding-bottom: 75.103%;
+            overflow: hidden;
+            position: relative;
+            background: #dddddd;
+            img{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                max-height: 100%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &__link{
+            display: flex;
+            flex-direction: column;
+            &:hover{
+                .board-gallery{
+                    &__img{
+                        position: relative;
+                        &::before{
+                            position: absolute;
+                            width:100%;
+                            height:100%;
+                            background: rgba(25,57,136,.8) url(../image/common/icon/icon_more--color-white.png) no-repeat center;
+                            content: "";
+                            z-index: 1;
+                        }
+                    }
+                    &__tit{
+                        color:#193988;
+                    }
+                }
+            }
+        }
+        &__tit{
+            margin-top: 2.5rem;
+            @include ellipsis(1);
+            font: {
+                size: 1.8rem;
+                weight:500;
+            };
+        }
+        &__date{
+            margin-top: 1.7rem;
+            font-size: 1.4rem;
+            color:#747478;
+        }
     }
 }
 .table{
@@ -36,6 +206,7 @@
             }
             td{
                font-size: 1.6rem;
+               line-height: normal;
                 &.tit{
                     text-align: left;
                     &-link{
@@ -45,13 +216,37 @@
                 }
                 .tit{
                     &__inner{
-                        @include ellipsis(1);
+                        white-space: nowrap;
                     }
                     &-link{
+                        display: inline-block;
+                        max-width:100%;
                         padding-left: 4.5rem;
+                        padding-right: 2rem;
                         font-size: 1.6rem;
+                        @include ellipsis(1);
+                        vertical-align: middle;
+                        &__lock{
+                            background: url(../image/sub/icon-lock.png) no-repeat right center;
+                        }
                     }
                 }
+                &.file{
+                    .icon{
+                        &-file{
+                            @include d-flex;
+                            width:1.7rem;
+                            height:1.9rem;
+                            margin: 0 auto;
+                            background: url(../image/sub/icon-file.png);
+                        }
+                    }
+                }
+            }
+        }
+        td{
+            .ui-form{
+                margin: -.5rem -.5rem;
             }
         }
         &__hor{
@@ -86,7 +281,7 @@
             }
             td{
                 text-align: left;
-                padding: .5rem 1rem;
+                padding: 1rem 1.5rem;
             }
         }
         &__hover{
@@ -106,6 +301,9 @@
         .state{
             &-ing{
                 color:#1b5dff;
+                font-weight: 500;
+            }
+            &-soon{                
                 font-weight: 500;
             }
             &-end{

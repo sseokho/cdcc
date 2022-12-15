@@ -231,10 +231,9 @@
 							<div class="lnb__inner">
 								<div class="lnb-title">게시판</div>
 								<ul class="lnb-list">
-									<li class="lnb-item is-active"><a class="lnb-link"
-											href="javascript:void(0)">공지사항</a></li>
+									<li class="lnb-item"><a class="lnb-link" href="javascript:void(0)">공지사항</a></li>
 									<li class="lnb-item"><a class="lnb-link" href="javascript:void(0)">사진첩</a></li>
-									<li class="lnb-item"><a class="lnb-link" href="javascript:void(0)">참여후기</a></li>
+									<li class="lnb-item is-active"><a class="lnb-link" href="javascript:void(0)">참여후기</a></li>
 
 								</ul>
 							</div>
@@ -242,7 +241,7 @@
 						<div class="contents-core">
 							<div class="contents-core__inner">
 
-								<div class="contents-core__title">공지사항</div>
+								<div class="contents-core__title">참여후기</div>
 
 								<div class="board-top">
 									<div class="total-count">
@@ -252,12 +251,10 @@
 										<div class="search-box__select ui-form form-select">
 											<select name="searchType" class="select ui-select">
 												<option value="all">구분</option>
-												<option value="subject">진로특강</option>
-												<option value="">맞춤형 멘토링</option>
-												<option value="">심리상담 </option>
-												<option value="">집단상담 </option>
+												<option value="subject">학생활동단</option>
+												<option value="">멘토링</option>
+												<option value="">직장탐방</option>
 												<option value="">기타</option>
-												<option value="">맞춤형 멘토링</option>
 											</select>
 										</div>
 										<div class="search-box__select ui-form form-select search-box__right">
@@ -303,10 +300,11 @@
 												<!-- 전달사항 :: 리스트 최대 10개 표출해 주세요. -->
 												<tr>
 													<td class="num">70</td>
-													<td class="type">진로특강</td>
+													<td class="type">학생활동단</td>
 													<td class="tit">
 														<div class="tit__inner">
-															<a href="javascript:void(0)" class="tit-link">2022-2학기 생생원
+                                                            <!-- 전달사항 :: 비밀글일때 class에 tit-link__lock 붙습니다. -->
+															<a href="javascript:void(0)" class="tit-link tit-link__lock" data-toggle="modal" data-target="#modalLock">2022-2학기 생생원
 																조선 KOTRA 해외프로젝트사업단2022-2학기 생생원 조선 KOTRA
 																해외프로젝트사업단2022-2학기 생생원 조선 KOTRA 해외프로젝트사업단</a>
 														</div>
@@ -317,20 +315,21 @@
 												</tr>
 												<tr>
 													<td class="num">70</td>
-													<td class="type">맞춤형 멘토링</td>
+													<td class="type">멘토링</td>
 													<td class="tit">
 														<div class="tit__inner">
-															<a href="javascript:void(0)" class="tit-link">입시에 따른 학생생활문화원 휴원일 안내
+															<!-- 전달사항 :: 비밀글일때 class에 tit-link__lock 붙습니다. -->
+															<a href="javascript:void(0)" class="tit-link tit-link__lock" data-toggle="modal" data-target="#modalLock">입시에 따른 학생생활문화원 휴원일 안내
 															</a>
 														</div>
 													</td>
-													<td class="file"><i class="icon icon-file"></i></td>
+													<td class="file"></td>
 													<td class="author">관리자</td>
 													<td class="date">2022-03-22</td>
 												</tr>
 												<tr>
 													<td class="num">70</td>
-													<td class="type">심리상담</td>
+													<td class="type">직장탐방</td>
 													<td class="tit">
 														<div class="tit__inner">
 															<a href="javascript:void(0)" class="tit-link">2022-2학기 생생원
@@ -349,6 +348,10 @@
 
 								<div class="board-bottom ">
 									<div class="board-bottom__inner">
+                                        <div class="ui-buttons ui-buttons__right">
+                                            <button type="button" class="ui-button ui-button__width-m ui-button__bg-blue">등 록</button>
+                                        </div>
+
 										<div class="paging">
 											<div class="paging__inner">
 												<a href="javascript:void(0)" class="paging-link paging-link__first"></a>
@@ -369,6 +372,35 @@
 										</div>
 									</div>
 								</div>
+
+                                <!-- 비밀번호 입력 모달 -->
+                                <div class="modal fade" id="modalLock" tabindex="-1" aria-labelledby="modalLockLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-auto modal-lock">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                비밀글 보기
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="lock-box">
+                                                    <p class="font-size__20 font-weight__m text-center">이 글은 비밀글입니다.</p>
+                                                    <p class="lock-txt">비밀번호를 입력하여 주세요.</p>
+                                                </div>
+                                                <div class="line-gray"></div>
+                                                <div class="lock-box">
+                                                    <input type="password" name="" value="" class="ui-input ui-input__width-100" placeholder="숫자 4자리를 입력해주세요.">
+                                                    <p class="lock-txt__alert">* 비밀번호가 일치하지 않습니다.</p>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="ui-buttons">
+                                                    <button type="button" class="ui-button ui-button__width-m ui-button__border-gray font-weight__m" data-dismiss="modal">목 록</button>
+                                                    <button type="button" class="ui-button ui-button__width-m ui-button__bg-blue">확 인</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--// 비밀번호 입력 모달 -->
 
 
 							</div>

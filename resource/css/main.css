@@ -145,6 +145,10 @@
   color: rgba(0, 70, 144, 0.4) !important;
 }
 
+.font-size__20 {
+  font-size: 2rem;
+}
+
 .font-family__sn {
   font-family: "SeoulNamsan";
 }
@@ -370,16 +374,6 @@ html {
 
 .font_j {
   font-family: "JSDongkang-bold", "JSDongkang-Regular";
-}
-
-p {
-  font-size: 1.8rem;
-  color: #000000;
-  line-height: 3.2rem;
-}
-p.font-s {
-  font-size: 1.8rem;
-  line-height: 3.4rem;
 }
 
 .font-n {

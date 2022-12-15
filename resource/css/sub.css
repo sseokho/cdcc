@@ -145,6 +145,10 @@
   color: rgba(0, 70, 144, 0.4) !important;
 }
 
+.font-size__20 {
+  font-size: 2rem;
+}
+
 .font-family__sn {
   font-family: "SeoulNamsan";
 }
@@ -370,16 +374,6 @@ html {
 
 .font_j {
   font-family: "JSDongkang-bold", "JSDongkang-Regular";
-}
-
-p {
-  font-size: 1.8rem;
-  color: #000000;
-  line-height: 3.2rem;
-}
-p.font-s {
-  font-size: 1.8rem;
-  line-height: 3.4rem;
 }
 
 .font-n {
@@ -825,6 +819,55 @@ label {
   height: 0.2rem;
   background: #333333;
   content: "";
+}
+
+/*== 게시판 ==*/
+/* 참여후기 */
+.lock-box {
+  padding: 3rem 0;
+  text-align: center;
+}
+.lock-box .ui-input {
+  width: 22.5rem;
+  border-color: #dbdfe8;
+}
+.lock-txt {
+  margin-top: 2rem;
+  font-size: 15px;
+  text-align: center;
+}
+.lock-txt__alert {
+  margin-top: 1rem;
+  font-size: 14px;
+  color: #f63333;
+}
+
+.line-gray {
+  width: 100%;
+  height: 1px;
+  background: #dbdfe8;
+}
+
+.text-ps {
+  font-size: 15px;
+  color: #f63333;
+}
+
+.cell-wrap {
+  display: flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.cell-col + .cell-col {
+  margin-left: 2rem;
+}
+.cell-col__flex-none {
+  flex: none;
 }
 
 /*==========================================================================================================================================================================================================================================================================*/
