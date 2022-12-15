@@ -35,8 +35,6 @@
                 border-bottom:1px solid #eaecf2;
             }
             td{
-                padding: 1.6rem 0;
-               text-align: center;
                font-size: 1.6rem;
                 &.tit{
                     text-align: left;
@@ -56,8 +54,11 @@
                 }
             }
         }
-        &__ver{
-            
+        &__hor{
+            td{
+                padding: 1.6rem 0;
+                text-align: center;
+            }
             thead{
                 th{
                     &+th{
@@ -72,6 +73,20 @@
                         }
                     }
                 }
+            }
+        }
+        &__ver{
+            tr{
+                height: 5.5rem;
+            }
+            th{
+                padding-left: 3rem;
+                background: #f9fbfd;
+                border-right:1px solid #dbdfe8;
+            }
+            td{
+                text-align: left;
+                padding: .5rem 1rem;
             }
         }
         &__hover{
